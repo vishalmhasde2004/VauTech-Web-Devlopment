@@ -1,0 +1,113 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Header + Nav */
+header {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Buttons */
+.btn {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #084298;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+section {
+    margin-bottom: 40px;
+}
+h1, h2, h3 {
+    color: #0b5ed7;
+}
+p {
+    color: #333;
+    font-size: 15px;
+}
+
+/* Card Layout for Stadiums */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.card {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #f1f1f1;
+}
+/* Table row hover */
+table tbody tr:hover {
+    background-color: #e6f0ff;
+}
+/* Highlight top records */
+tr.top-record {
+    background-color: #fff3cd;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 15px;
+}

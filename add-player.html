@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Player</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Add Player</h1>
+<nav>
+<a href="index.html">Home</a> |
+<a href="matches.html">Matches</a> |
+<a href="players.html">Players</a> |
+<a href="add-player.html">Add Player</a> |
+<a href="stadium.html">Stadium</a> |
+<a href="records.html">Records</a>
+</nav>
+</header>
+
+<main>
+<form onsubmit="addPlayer(event)">
+<label>Player Name</label><br>
+<input type="text" id="name" required><br>
+<label>Country</label><br>
+<input type="text" id="country" required><br>
+<label>Role</label><br>
+<input type="text" id="role" required><br><br>
+<button type="submit" class="btn">Add Player</button>
+</form>
+</main>
+
+<footer>
+<p>&copy; 2026 Cricket Information Page</p>
+</footer>
+
+<script>
+function addPlayer(event){
+    event.preventDefault();
+    let players = JSON.parse(localStorage.getItem("players")) || [];
+    let player = {
+        name: document.getElementById("name").value,
+        country: document.getElementById("country").value,
+        role: document.getElementById("role").value
+    };
+    players.push(player);
+    localStorage.setItem("players", JSON.stringify(players));
+    alert("Player added successfully!");
+    window.location.href = "players.html";
+}
+</script>
+</body>
+</html>

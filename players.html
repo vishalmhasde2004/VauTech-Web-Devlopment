@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Players</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Players List</h1>
+<nav>
+<a href="index.html">Home</a> |
+<a href="matches.html">Matches</a> |
+<a href="players.html">Players</a> |
+<a href="add-player.html">Add Player</a> |
+<a href="stadium.html">Stadium</a> |
+<a href="records.html">Records</a>
+</nav>
+</header>
+
+<main>
+<table>
+<thead>
+<tr>
+<th>Player Name</th>
+<th>Country</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody id="playerTable"></tbody>
+</table>
+</main>
+
+<footer>
+<p>&copy; 2026 Cricket Information Page</p>
+</footer>
+
+<script>
+let players = JSON.parse(localStorage.getItem("players")) || [];
+let table = document.getElementById("playerTable");
+
+players.forEach(player => {
+    let row = `<tr>
+    <td>${player.name}</td>
+    <td>${player.country}</td>
+    <td>${player.role}</td>
+    </tr>`;
+    table.innerHTML += row;
+});
+</script>
+</body>
+</html>

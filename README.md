@@ -1,6 +1,5 @@
 # HTML Content Structuring & Accessibility
 
-
 ---
 
 ## Task Overview
